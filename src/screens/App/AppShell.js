@@ -1,8 +1,26 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
-
+import styled from 'styled-components'
 const { Header, Sider, Content } = Layout;
 
+const StyledLayout = styled(Layout)`
+.trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    &:hover{
+        color: #1890ff;
+    }
+  }
+
+ .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+  }
+`
 class AppShell extends React.Component {
   state = {
     collapsed: false,
@@ -16,7 +34,7 @@ class AppShell extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <StyledLayout>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
@@ -53,7 +71,7 @@ class AppShell extends React.Component {
             Content
           </Content>
         </Layout>
-      </Layout>
+      </StyledLayout>
     );
   }
 }
