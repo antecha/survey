@@ -8,6 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AppMenu from './AppMenu';
 
 const { Header, Sider, Content } = Layout;
 const StyledLayout = styled(Layout)`
@@ -44,26 +45,9 @@ class AppShell extends React.Component {
     return (
       <Router>
       <StyledLayout>
-        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
-          <div className="logo" />
-          <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1">
-              <Icon type="user" />
-              <span>nav 1</span>
-              <Link to="/home" />
-            </Menu.Item>
-            <Menu.Item key="2">
-              <Icon type="video-camera" />
-              <span>nav 2</span>
-              <Link to="/nav2" />
-            </Menu.Item>
-            <Menu.Item key="3">
-              <Icon type="upload" />
-              <span>nav 3</span>
-              <Link to="/nav3" />
-            </Menu.Item>
-          </Menu>
-        </Sider>
+
+        <AppMenu collapsed = {this.state.collapsed}/>
+
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
             <Icon
