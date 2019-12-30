@@ -1,8 +1,15 @@
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import styled from 'styled-components'
-const { Header, Sider, Content } = Layout;
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+const { Header, Sider, Content } = Layout;
 const StyledLayout = styled(Layout)`
 height:100vh ;
 .trigger {
@@ -35,6 +42,7 @@ class AppShell extends React.Component {
 
   render() {
     return (
+      <Router>
       <StyledLayout>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
@@ -42,14 +50,17 @@ class AppShell extends React.Component {
             <Menu.Item key="1">
               <Icon type="user" />
               <span>nav 1</span>
+              <Link to="/home" />
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="video-camera" />
               <span>nav 2</span>
+              <Link to="/nav2" />
             </Menu.Item>
             <Menu.Item key="3">
               <Icon type="upload" />
               <span>nav 3</span>
+              <Link to="/nav3" />
             </Menu.Item>
           </Menu>
         </Sider>
@@ -61,6 +72,8 @@ class AppShell extends React.Component {
               onClick={this.toggle}
             />
           </Header>
+
+          <Route exact path="/">
           <Content
             style={{
               margin: '24px 16px',
@@ -69,10 +82,39 @@ class AppShell extends React.Component {
               minHeight: 280,
             }}
           >
-            Content
+            home
           </Content>
+          </Route>
+
+          <Route path="/nav2">
+          <Content
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              background: '#fff',
+              minHeight: 280,
+            }}
+          >
+            nav2
+          </Content>
+          </Route>
+
+          <Route path="/nav3">
+          <Content
+            style={{
+              margin: '24px 16px',
+              padding: 24,
+              background: '#fff',
+              minHeight: 280,
+            }}
+          >
+            nav3
+          </Content>
+          </Route>
+          
         </Layout>
       </StyledLayout>
+      </Router>
     );
   }
 }
