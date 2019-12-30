@@ -2,15 +2,12 @@ import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import styled from 'styled-components'
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import AppMenu from './AppMenu';
 
-const { Header, Sider, Content } = Layout;
+import AppMenu from './AppMenu';
+import AppRoutes from './AppRoutes';
+import AppHeader from './AppHeader';
+
+const { Header} = Layout;
 const StyledLayout = styled(Layout)`
 height:100vh ;
 .trigger {
@@ -43,62 +40,19 @@ class AppShell extends React.Component {
 
   render() {
     return (
-      <Router>
+     
       <StyledLayout>
 
         <AppMenu collapsed = {this.state.collapsed}/>
 
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }}>
-            <Icon
-              className="trigger"
-              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-              onClick={this.toggle}
-            />
-          </Header>
+          <AppHeader collapsed = {this.state.collapsed} onIconClick={this.toggle}/>
 
-          <Route exact path="/">
-          <Content
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              background: '#fff',
-              minHeight: 280,
-            }}
-          >
-            home
-          </Content>
-          </Route>
-
-          <Route path="/nav2">
-          <Content
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              background: '#fff',
-              minHeight: 280,
-            }}
-          >
-            nav2
-          </Content>
-          </Route>
-
-          <Route path="/nav3">
-          <Content
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              background: '#fff',
-              minHeight: 280,
-            }}
-          >
-            nav3
-          </Content>
-          </Route>
+          <AppRoutes />
           
         </Layout>
       </StyledLayout>
-      </Router>
+     
     );
   }
 }
