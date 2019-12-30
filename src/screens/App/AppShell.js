@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const { Header, Sider, Content } = Layout;
 
 const StyledLayout = styled(Layout)`
+height:100vh ;
 .trigger {
     font-size: 18px;
     line-height: 64px;
