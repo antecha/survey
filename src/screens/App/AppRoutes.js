@@ -1,32 +1,32 @@
-import React from 'react';
-import {Route} from 'react-router-dom';
-import {Layout} from 'antd';
+import React from "react";
+import { Route } from "react-router-dom";
+import { Layout } from "antd";
 
-const {Content} = Layout;
+const { Content } = Layout;
 
-const AppContent =({text})=> <Content
-style={{
-  margin: '24px 16px',
-  padding: 24,
-  background: '#fff',
-  minHeight: 280,
-}}
->
-{text}
-</Content>
+const AppContent = ({ text }) => (
+  <Content
+    style={{
+      margin: "24px 16px",
+      padding: 24,
+      background: "#fff",
+      minHeight: 280
+    }}
+  >
+    {text}
+  </Content>
+);
 
-const AppRoutes = () => <React.Fragment>
+const AppRoutes = () => (
+  <React.Fragment>
     <Route exact path="/">
-          <AppContent text='home'/>
-          </Route>
+      <AppContent text="Survey List" />
+    </Route>
 
-          <Route path="/nav2">
-          <AppContent text='nav2'/>
-          </Route>
-
-          <Route path="/nav3">
-          <AppContent text='nav3'/>
-          </Route>
-</React.Fragment>
+    <Route path="/create-survey">
+      <AppContent text="create survey" />
+    </Route>
+  </React.Fragment>
+);
 
 export default AppRoutes;
