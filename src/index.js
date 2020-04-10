@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./screens/App";
-import * as serviceWorker from "./serviceWorker";
-import { Provider } from "react-redux";
-import sagas from "./config/sagas";
-import store, { sagaMiddleware } from "./config/store";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './screens/App';
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import sagas from './config/sagas';
+import store, { sagaMiddleware } from './config/store';
 
 sagaMiddleware.run(sagas);
 
@@ -12,7 +12,7 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

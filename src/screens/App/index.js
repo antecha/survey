@@ -1,7 +1,11 @@
-import React from "react";
-import AppShell from './AppShell'
-import {BrowserRouter} from 'react-router-dom'
+import React from 'react';
+import AppShell from './AppShell';
+import { BrowserRouter } from 'react-router-dom';
 
-const App = () => <BrowserRouter><AppShell/></BrowserRouter>;
+const App = () => (
+  <BrowserRouter>
+    <AppShell />
+  </BrowserRouter>
+);
 
 export default App;
