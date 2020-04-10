@@ -5,6 +5,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "test": "react-scripts test --watchAll=false --coverage",
+    "flow": "flow",
     "build": "react-app-rewired build",
     "eject": "react-scripts eject"
   },
