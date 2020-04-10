@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest-styled-components": "^7.0.2",
+    "react-app-rewire-styled-components": "^3.0.2"
   }
 }
