@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { Tabs, Input } from "antd";
-import { Button } from "antd";
+import React, { Component } from 'react';
+import { Tabs, Input } from 'antd';
+import { Button } from 'antd';
 
 const { TabPane } = Tabs;
 
 class CreateSurvey extends Component {
   state = {
     showAddQuestion: false,
-    saveQuestion: ""
+    saveQuestion: '',
   };
 
   handleShowQuestion4444 = () => {
@@ -30,9 +30,7 @@ class CreateSurvey extends Component {
             {showAddQuestion ? (
               <Input onChange={this.handleQuestion} />
             ) : (
-              <Button onClick={this.handleShowQuestion4444}>
-                add question
-              </Button>
+              <Button onClick={this.handleShowQuestion4444}>add question</Button>
             )}
           </TabPane>
           <TabPane tab="Preview Survey" key="2">
