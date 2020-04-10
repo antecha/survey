@@ -5,7 +5,7 @@ import CreateSurvey from '../CreateSurvey';
 
 const { Content } = Layout;
 
-const AppContent = ({ children }) => (
+export const AppContent = ({ children }) => (
   <Content
     style={{
       margin: '24px 16px',
@@ -19,11 +19,12 @@ const AppContent = ({ children }) => (
 );
 
 const AppRoutes = () => {
-  console.log(React);
   return (
     <React.Fragment>
       <Route exact path="/">
-        <AppContent children={<CreateSurvey />} />
+        <AppContent>
+          <CreateSurvey />
+        </AppContent>
       </Route>
 
       <Route path="/create-survey">
