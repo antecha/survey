@@ -6,6 +6,7 @@
     "start": "react-app-rewired start",
     "test": "react-scripts test --watchAll=false --coverage",
     "test:ci": "react-scripts test --watchAll=false --env=jsdom --coverage --ci --no-cache --maxWorkers=2",
+    "updateSnapshot": "react-scripts test --watchAll=false --coverage --updateSnapshot",
     "flow": "flow",
     "lint": "eslint 'src/**/*.js' --quiet",
     "lint:fix": "npm run lint --fix",
