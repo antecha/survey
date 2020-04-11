@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import AppRoutes, { AppContent } from './AppRoutes';
+import AppShell from './AppShell';
 import { MemoryRouter } from 'react-router';
 
 jest.mock('antd', _ => ({
@@ -8,25 +8,12 @@ jest.mock('antd', _ => ({
   Tabs: () => <div />,
 }));
 
-describe('AppContent', () => {
-  const testRenderer = create(
-    <AppContent>
-      <div />
-    </AppContent>,
-  );
-
-  it('renders', () => {
-    expect(testRenderer.toJSON()).toMatchSnapshot();
-  });
-});
-
-describe('AppRoutes', () => {
+describe('AppShell', () => {
   const testRenderer = create(
     <MemoryRouter>
-      <AppRoutes />,
+      <AppShell />
     </MemoryRouter>,
   );
-
   it('renders', () => {
     expect(testRenderer.toJSON()).toMatchSnapshot();
   });
