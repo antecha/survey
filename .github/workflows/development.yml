@@ -1,11 +1,6 @@
 name: development workflow
 
-on:
-  pull_request:
-  push:
-    branches:
-      - staging
-      - master
+on: pull_request
 
 jobs:
   test:
@@ -27,7 +22,7 @@ jobs:
         run: npm run lint
 
       - name: test_flow-type
-        run: npm run lint
+        run: npm run flow
 
       - name: test_jest
         run: npm run test:ci

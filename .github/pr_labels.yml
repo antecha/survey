@@ -1,7 +1,0 @@
-feat: ['feature/*', 'feat/*']
-bug: fix/*
-chore: chore/*
-test: test/*
-refactor: refactor/*
-dependencies: deps/*
-documentation: docs/*
