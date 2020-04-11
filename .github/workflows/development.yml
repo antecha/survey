@@ -1,0 +1,35 @@
+name: development workflow
+
+on:
+  pull_request:
+  push:
+    branches:
+      - staging
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: https://registry.npmjs.org
+
+      - name: install
+        run: npm install
+
+      - name: test_lint
+        run: npm run lint
+
+      - name: test_flow-type
+        run: npm run lint
+
+      - name: test_jest
+        run: npm run test:ci
+
+      - uses: codecov/codecov-action@v1
