@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import AppShell from './AppShell';
+import Shell from './Shell';
 import { MemoryRouter } from 'react-router';
 
 jest.mock('antd', _ => ({
@@ -8,10 +8,10 @@ jest.mock('antd', _ => ({
   Tabs: () => <div />,
 }));
 
-describe('AppShell', () => {
+describe('Shell', () => {
   const testRenderer = create(
     <MemoryRouter>
-      <AppShell />
+      <Shell />
     </MemoryRouter>,
   );
   it('renders', () => {
