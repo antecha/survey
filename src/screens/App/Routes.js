@@ -18,7 +18,7 @@ export const AppContent = ({ children }) => (
   </Content>
 );
 
-const AppRoutes = () => {
+const Routes = () => {
   return (
     <React.Fragment>
       <Route exact path="/">
@@ -34,4 +34,4 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
+export default Routes;
