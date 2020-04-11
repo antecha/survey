@@ -1,12 +1,12 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
 import { MemoryRouter } from 'react-router';
-import AppMenu from './AppMenu';
+import Sidebar from './Sidebar';
 
-describe('AppMenu', () => {
+describe('Sidebar', () => {
   const testRenderer = create(
     <MemoryRouter>
-      <AppMenu collapsed={true} />
+      <Sidebar collapsed={true} />
     </MemoryRouter>,
   );
 

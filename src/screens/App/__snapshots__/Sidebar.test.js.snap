@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppMenu renders 1`] = `
+exports[`Sidebar renders 1`] = `
 <aside
   className="ant-layout-sider ant-layout-sider-dark ant-layout-sider-collapsed"
   style={
