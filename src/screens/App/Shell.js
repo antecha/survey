@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Sidebar from './Sidebar';
 import Routes from './Routes';
-import AppHeader from './AppHeader';
+import Header from './Header';
 
 const StyledLayout = styled(Layout)`
   height: 100vh;
@@ -43,7 +43,7 @@ class Shell extends React.Component {
         <Sidebar collapsed={this.state.collapsed} />
 
         <Layout>
-          <AppHeader collapsed={this.state.collapsed} onIconClick={this.toggle} />
+          <Header collapsed={this.state.collapsed} onIconClick={this.toggle} />
 
           <Routes />
         </Layout>

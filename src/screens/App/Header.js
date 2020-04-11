@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Icon } from 'antd';
 
-const AppHeader = ({ collapsed, onIconClick }) => (
+const Header = ({ collapsed, onIconClick }) => (
   <Layout.Header style={{ background: '#fff', padding: 0 }}>
     <Icon
       className="trigger"
@@ -11,4 +11,4 @@ const AppHeader = ({ collapsed, onIconClick }) => (
   </Layout.Header>
 );
 
-export default AppHeader;
+export default Header;
