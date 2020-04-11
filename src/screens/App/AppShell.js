@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 import styled from 'styled-components';
 
 import AppMenu from './AppMenu';
-import AppRoutes from './AppRoutes';
+import Routes from './Routes';
 import AppHeader from './AppHeader';
 
 const StyledLayout = styled(Layout)`
@@ -44,7 +44,7 @@ class AppShell extends React.Component {
         <Layout>
           <AppHeader collapsed={this.state.collapsed} onIconClick={this.toggle} />
 
-          <AppRoutes />
+          <Routes />
         </Layout>
       </StyledLayout>
     );
