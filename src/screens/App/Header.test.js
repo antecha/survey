@@ -1,9 +1,9 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import AppHeader from './AppHeader';
+import Header from './Header';
 
-describe('AppHeader', () => {
-  const testRenderer = create(<AppHeader />);
+describe('Header', () => {
+  const testRenderer = create(<Header />);
 
   it('renders', () => {
     expect(testRenderer.toJSON()).toMatchSnapshot();
