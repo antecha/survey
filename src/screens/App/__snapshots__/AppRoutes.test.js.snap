@@ -17,19 +17,22 @@ exports[`AppContent renders 1`] = `
 `;
 
 exports[`AppRoutes renders 1`] = `
-<main
-  className="ant-layout-content"
-  style={
-    Object {
-      "background": "#fff",
-      "margin": "24px 16px",
-      "minHeight": 280,
-      "padding": 24,
+Array [
+  <main
+    className="ant-layout-content"
+    style={
+      Object {
+        "background": "#fff",
+        "margin": "24px 16px",
+        "minHeight": 280,
+        "padding": 24,
+      }
     }
-  }
->
-  <div>
-    <div />
-  </div>
-</main>
+  >
+    <div>
+      <div />
+    </div>
+  </main>,
+  ",",
+]
 `;
