@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const { Sider } = Layout;
 
-const AppMenu = ({ collapsed }) => (
+const Sidebar = ({ collapsed }) => (
   <Sider trigger={null} collapsible collapsed={collapsed}>
     <div className="logo" />
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
@@ -22,4 +22,4 @@ const AppMenu = ({ collapsed }) => (
   </Sider>
 );
 
-export default AppMenu;
+export default Sidebar;

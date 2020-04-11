@@ -16,7 +16,7 @@ exports[`AppContent renders 1`] = `
 </main>
 `;
 
-exports[`AppRoutes renders 1`] = `
+exports[`Routes renders 1`] = `
 Array [
   <main
     className="ant-layout-content"

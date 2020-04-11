@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import AppRoutes, { AppContent } from './AppRoutes';
+import Routes, { AppContent } from './Routes';
 import { MemoryRouter } from 'react-router';
 
 jest.mock('antd', _ => ({
@@ -20,10 +20,10 @@ describe('AppContent', () => {
   });
 });
 
-describe('AppRoutes', () => {
+describe('Routes', () => {
   const testRenderer = create(
     <MemoryRouter>
-      <AppRoutes />,
+      <Routes />,
     </MemoryRouter>,
   );
 

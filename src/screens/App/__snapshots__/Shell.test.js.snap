@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppShell renders 1`] = `
+exports[`Shell renders 1`] = `
 <section
   className="sc-AxjAm jCuiTa ant-layout ant-layout-has-sider"
 >

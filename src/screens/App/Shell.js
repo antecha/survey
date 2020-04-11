@@ -2,9 +2,9 @@ import React from 'react';
 import { Layout } from 'antd';
 import styled from 'styled-components';
 
-import AppMenu from './AppMenu';
-import AppRoutes from './AppRoutes';
-import AppHeader from './AppHeader';
+import Sidebar from './Sidebar';
+import Routes from './Routes';
+import Header from './Header';
 
 const StyledLayout = styled(Layout)`
   height: 100vh;
@@ -25,7 +25,8 @@ const StyledLayout = styled(Layout)`
     margin: 16px;
   }
 `;
-class AppShell extends React.Component {
+
+class Shell extends React.Component {
   state = {
     collapsed: false,
   };
@@ -39,16 +40,16 @@ class AppShell extends React.Component {
   render() {
     return (
       <StyledLayout>
-        <AppMenu collapsed={this.state.collapsed} />
+        <Sidebar collapsed={this.state.collapsed} />
 
         <Layout>
-          <AppHeader collapsed={this.state.collapsed} onIconClick={this.toggle} />
+          <Header collapsed={this.state.collapsed} onIconClick={this.toggle} />
 
-          <AppRoutes />
+          <Routes />
         </Layout>
       </StyledLayout>
     );
   }
 }
 
-export default AppShell;
+export default Shell;
