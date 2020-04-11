@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from 'antd';
 import styled from 'styled-components';
 
-import AppMenu from './AppMenu';
+import Sidebar from './Sidebar';
 import Routes from './Routes';
 import AppHeader from './AppHeader';
 
@@ -40,7 +40,7 @@ class Shell extends React.Component {
   render() {
     return (
       <StyledLayout>
-        <AppMenu collapsed={this.state.collapsed} />
+        <Sidebar collapsed={this.state.collapsed} />
 
         <Layout>
           <AppHeader collapsed={this.state.collapsed} onIconClick={this.toggle} />
