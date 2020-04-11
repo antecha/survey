@@ -25,7 +25,8 @@ const StyledLayout = styled(Layout)`
     margin: 16px;
   }
 `;
-class AppShell extends React.Component {
+
+class Shell extends React.Component {
   state = {
     collapsed: false,
   };
@@ -51,4 +52,4 @@ class AppShell extends React.Component {
   }
 }
 
-export default AppShell;
+export default Shell;

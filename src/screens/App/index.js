@@ -1,10 +1,10 @@
 import React from 'react';
-import AppShell from './AppShell';
+import Shell from './Shell';
 import { BrowserRouter } from 'react-router-dom';
 
 const App = () => (
   <BrowserRouter>
-    <AppShell />
+    <Shell />
   </BrowserRouter>
 );
 
