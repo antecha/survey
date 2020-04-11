@@ -1,6 +1,11 @@
 name: development workflow
 
-on: pull_request
+on:
+  pull_request:
+  push:
+    branches:
+      - staging
+      - master
 
 jobs:
   test:
