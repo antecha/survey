@@ -1,9 +1,9 @@
 name: development workflow
 
-on: [push]
+on: pull_request
 
 jobs:
-  development:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +26,5 @@ jobs:
 
       - name: test_jest
         run: npm run test:ci
+
+      - uses: codecov/codecov-action@v1
