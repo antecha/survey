@@ -141,9 +141,7 @@ exports[`App renders 1`] = `
     <main
       className="sc-AxiKw jAJPxZ ant-layout-content"
     >
-      <div>
-        <div />
-      </div>
+      Suvey-list
     </main>
   </section>
 </section>

@@ -14,13 +14,13 @@ const Routes = (): Element<any> => {
   return (
     <React.Fragment>
       <Route exact path="/">
-        <AppContent>
-          <CreateSurvey />
-        </AppContent>
+        <AppContent>Suvey-list</AppContent>
       </Route>
 
       <Route path="/create-survey">
-        <AppContent children="create survey" />
+        <AppContent>
+          <CreateSurvey />
+        </AppContent>
       </Route>
     </React.Fragment>
   );
