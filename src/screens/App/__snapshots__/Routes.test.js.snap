@@ -2,15 +2,7 @@
 
 exports[`AppContent renders 1`] = `
 <main
-  className="ant-layout-content"
-  style={
-    Object {
-      "background": "#fff",
-      "margin": "24px 16px",
-      "minHeight": 280,
-      "padding": 24,
-    }
-  }
+  className="sc-AxiKw jDVMHU ant-layout-content"
 >
   <div />
 </main>
@@ -19,15 +11,7 @@ exports[`AppContent renders 1`] = `
 exports[`Routes renders 1`] = `
 Array [
   <main
-    className="ant-layout-content"
-    style={
-      Object {
-        "background": "#fff",
-        "margin": "24px 16px",
-        "minHeight": 280,
-        "padding": 24,
-      }
-    }
+    className="sc-AxiKw jDVMHU ant-layout-content"
   >
     <div>
       <div />
