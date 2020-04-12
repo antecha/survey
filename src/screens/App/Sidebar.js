@@ -1,10 +1,13 @@
+// @flow
 import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
+import type { SidebarProps } from './types';
+import type { Element } from './types';
 
 const { Sider } = Layout;
 
-const Sidebar = ({ collapsed }) => (
+const Sidebar = ({ collapsed }: SidebarProps): Element<'Sider'> => (
   <Sider trigger={null} collapsible collapsed={collapsed}>
     <div className="logo" />
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>

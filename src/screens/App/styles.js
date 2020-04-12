@@ -30,5 +30,5 @@ export const StyledContent = styled(Layout.Content)`
   margin: 24px 16px;
   padding: 24;
   background: #fff;
-  minheight: 280;
+  min-height: 280;
 `;
