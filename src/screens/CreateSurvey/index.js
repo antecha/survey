@@ -1,9 +1,12 @@
+// @flow
 import React, { Component } from 'react';
 import { Tabs, Input, Button } from 'antd';
+import type { Element } from '../types';
+import type { SurveyState } from '../types';
 
 const { TabPane } = Tabs;
 
-class CreateSurvey extends Component {
+class CreateSurvey extends Component<{}, SurveyState> {
   state = {
     showAddQuestion: false,
     saveQuestion: '',
@@ -18,7 +21,7 @@ class CreateSurvey extends Component {
     this.setState({ saveQuestion: e.target.value });
   };
 
-  render() {
+  render(): Element<'div'> {
     const { showAddQuestion, saveQuestion } = this.state;
 
     console.log(showAddQuestion, saveQuestion);

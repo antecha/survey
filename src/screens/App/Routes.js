@@ -1,11 +1,16 @@
+// @flow
 import React from 'react';
 import { Route } from 'react-router-dom';
 import CreateSurvey from '../CreateSurvey';
 import { StyledContent } from './styles';
+import type { RoutesProps } from './types';
+import type { Element } from './types';
 
-export const AppContent = ({ children }) => <StyledContent>{children}</StyledContent>;
+export const AppContent = ({ children }: RoutesProps): Element<'StyledContent'> => (
+  <StyledContent>{children}</StyledContent>
+);
 
-const Routes = () => {
+const Routes = (): Element<'React.Fragment'> => {
   return (
     <React.Fragment>
       <Route exact path="/">
