@@ -1,22 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Layout } from 'antd';
 import CreateSurvey from '../CreateSurvey';
+import { StyledContent } from './styles';
 
-const { Content } = Layout;
-
-export const AppContent = ({ children }) => (
-  <Content
-    style={{
-      margin: '24px 16px',
-      padding: 24,
-      background: '#fff',
-      minHeight: 280,
-    }}
-  >
-    {children}
-  </Content>
-);
+export const AppContent = ({ children }) => <StyledContent>{children}</StyledContent>;
 
 const Routes = () => {
   return (
