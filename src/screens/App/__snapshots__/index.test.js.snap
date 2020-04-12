@@ -60,7 +60,7 @@ exports[`App renders 1`] = `
             </svg>
           </i>
           <span>
-            Survey List
+            Home
           </span>
           <a
             href="/"
@@ -68,12 +68,38 @@ exports[`App renders 1`] = `
           />
         </li>
         <li
+          className="ant-menu-submenu ant-menu-submenu-inline"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          role="menuitem"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup="true"
+            className="ant-menu-submenu-title"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "paddingLeft": 24,
+              }
+            }
+            title="Survey List"
+          >
+            Survey List
+            <i
+              className="ant-menu-submenu-arrow"
+            />
+          </div>
+          <div />
+        </li>
+        <li
           className="ant-menu-item"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           role="menuitem"
-          skey="2"
           style={
             Object {
               "paddingLeft": 24,
