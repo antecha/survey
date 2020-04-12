@@ -1,22 +1,19 @@
+// @flow
+import type { Element } from 'react';
 export type { Element } from 'react';
 
 export type HeaderProps = {
   collapsed: boolean,
-  onIconClick: any,
+  onIconClick: () => void,
 };
 export type ShellState = {
-  collapsed: Boolean,
+  collapsed: boolean,
 };
 
 export type SidebarProps = {
-  collapsed: Boolean,
+  collapsed: boolean,
 };
 
 export type RoutesProps = {
-  children: any,
-};
-
-export type SurveyState = {
-  showAddQuestion: Boolean,
-  saveQuestion: any,
+  children: Element<any> | string,
 };

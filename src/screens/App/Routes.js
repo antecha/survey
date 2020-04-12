@@ -10,7 +10,7 @@ export const AppContent = ({ children }: RoutesProps): Element<'StyledContent'> 
   <StyledContent>{children}</StyledContent>
 );
 
-const Routes = (): Element<'React.Fragment'> => {
+const Routes = (): Element<any> => {
   return (
     <React.Fragment>
       <Route exact path="/">

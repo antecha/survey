@@ -1,8 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import { Tabs, Input, Button } from 'antd';
-import type { Element } from '../types';
-import type { SurveyState } from '../types';
+import type { Element } from './types';
+import type { SurveyState } from './types';
 
 const { TabPane } = Tabs;
 
@@ -12,11 +12,11 @@ class CreateSurvey extends Component<{}, SurveyState> {
     saveQuestion: '',
   };
 
-  handleShowQuestion4444 = () => {
+  handleShowQuestion4444 = (): void => {
     this.setState({ showAddQuestion: true });
   };
 
-  handleQuestion = e => {
+  handleQuestion = (e: { target: { value: string } }): void => {
     console.log(e);
     this.setState({ saveQuestion: e.target.value });
   };
