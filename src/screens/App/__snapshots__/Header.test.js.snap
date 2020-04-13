@@ -2,13 +2,7 @@
 
 exports[`Header renders 1`] = `
 <header
-  className="ant-layout-header"
-  style={
-    Object {
-      "background": "#fff",
-      "padding": 0,
-    }
-  }
+  className="sc-AxirZ cnDfgi ant-layout-header"
 >
   <i
     aria-label="icon: menu-fold"

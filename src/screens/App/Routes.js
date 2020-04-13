@@ -1,34 +1,26 @@
+// @flow
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Layout } from 'antd';
 import CreateSurvey from '../CreateSurvey';
+import { StyledContent } from './styles';
+import type { RoutesProps } from './types';
+import type { Element } from './types';
 
-const { Content } = Layout;
-
-export const AppContent = ({ children }) => (
-  <Content
-    style={{
-      margin: '24px 16px',
-      padding: 24,
-      background: '#fff',
-      minHeight: 280,
-    }}
-  >
-    {children}
-  </Content>
+export const AppContent = ({ children }: RoutesProps): Element<'StyledContent'> => (
+  <StyledContent>{children}</StyledContent>
 );
 
-const Routes = () => {
+const Routes = (): Element<any> => {
   return (
     <React.Fragment>
       <Route exact path="/">
-        <AppContent>
-          <CreateSurvey />
-        </AppContent>
+        <AppContent>Suvey-list</AppContent>
       </Route>
 
       <Route path="/create-survey">
-        <AppContent children="create survey" />
+        <AppContent>
+          <CreateSurvey />
+        </AppContent>
       </Route>
     </React.Fragment>
   );

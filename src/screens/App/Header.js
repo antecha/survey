@@ -1,14 +1,18 @@
+// @flow
 import React from 'react';
-import { Layout, Icon } from 'antd';
+import { Icon } from 'antd';
+import { StyledHeader } from './styles';
+import type { HeaderProps } from './types';
+import type { Element } from './types';
 
-const Header = ({ collapsed, onIconClick }) => (
-  <Layout.Header style={{ background: '#fff', padding: 0 }}>
+const Header = ({ collapsed, onIconClick }: HeaderProps): Element<'StyledHeader'> => (
+  <StyledHeader>
     <Icon
       className="trigger"
       type={collapsed ? 'menu-unfold' : 'menu-fold'}
       onClick={onIconClick}
     />
-  </Layout.Header>
+  </StyledHeader>
 );
 
 export default Header;
