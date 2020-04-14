@@ -7,20 +7,7 @@ import type { Element } from './types';
 const RadioGroup = Radio.Group;
 const { Option } = Select;
 
-function onDateChange(date, dateString) {
-  console.log(date, dateString);
-}
-
 class SurveyStatic extends Component<{}, SurveyStaticType> {
-  state = {
-    value: 1,
-  };
-  onChange = (e: { target: { value: Object } }): void => {
-    console.log('radio checked', e.target.value);
-    this.setState({
-      value: e.target.value,
-    });
-  };
   render(): Element<'div'> {
     const radioStyle = {
       display: 'block',
@@ -30,7 +17,7 @@ class SurveyStatic extends Component<{}, SurveyStaticType> {
     return (
       <div>
         <div>Q1. How do you ask in German 'what is your name' ?</div>
-        <RadioGroup onChange={this.onChange} value={this.state.value}>
+        <RadioGroup>
           <Radio style={radioStyle} value={1}>
             Wie geht es dir?
           </Radio>
@@ -49,7 +36,7 @@ class SurveyStatic extends Component<{}, SurveyStaticType> {
         <Slider range defaultValue={[5, 35]} />
 
         <div>Q4. When is your birthday?</div>
-        <DatePicker onChange={onDateChange} />
+        <DatePicker />
 
         <div>Q5. What kind of coffee do you like?</div>
         <Select defaultValue="freddo">
