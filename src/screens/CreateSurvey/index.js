@@ -24,7 +24,6 @@ class CreateSurvey extends Component<{}, SurveyState> {
   render(): Element<'div'> {
     const { showAddQuestion, saveQuestion } = this.state;
 
-    console.log(showAddQuestion, saveQuestion);
     return (
       <div>
         <Tabs defaultActiveKey="1">

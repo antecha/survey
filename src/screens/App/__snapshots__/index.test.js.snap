@@ -165,7 +165,7 @@ exports[`App renders 1`] = `
       </i>
     </header>
     <main
-      className="sc-AxiKw jAJPxZ ant-layout-content"
+      className="sc-AxiKw koYlkT ant-layout-content"
     >
       Suvey-list
     </main>

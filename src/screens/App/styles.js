@@ -28,7 +28,7 @@ export const StyledHeader = styled(Layout.Header)`
 
 export const StyledContent = styled(Layout.Content)`
   margin: 24px 16px;
-  padding: 24;
+  padding: 40px;
   background: #fff;
   min-height: 280;
 `;
