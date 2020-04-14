@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import type { SidebarProps } from './types';
 import type { Element } from './types';
 
+const { SubMenu } = Menu;
 const { Sider } = Layout;
 
 const Sidebar = ({ collapsed }: SidebarProps): Element<'Sider'> => (
@@ -13,10 +14,18 @@ const Sidebar = ({ collapsed }: SidebarProps): Element<'Sider'> => (
     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
       <Menu.Item key="1">
         <Icon type="user" />
-        <span>Survey List</span>
+        <span>Home</span>
         <Link to="/" />
       </Menu.Item>
-      <Menu.Item skey="2">
+      <SubMenu title={'Survey List'}>
+        <Menu.Item>
+          <Icon type="user" />
+          <span>Survey Static</span>
+          <Link to="/SurveyList/SurveyStatic" />
+        </Menu.Item>
+      </SubMenu>
+
+      <Menu.Item key="2">
         <Icon type="video-camera" />
         <span>create-survey</span>
         <Link to="/create-survey" />
