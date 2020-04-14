@@ -9,7 +9,7 @@ exports[`SurveyStatic renders 1`] = `
     className="ant-radio-group ant-radio-group-outline"
   >
     <label
-      className="ant-radio-wrapper ant-radio-wrapper-checked"
+      className="ant-radio-wrapper"
       style={
         Object {
           "display": "block",
@@ -19,11 +19,11 @@ exports[`SurveyStatic renders 1`] = `
       }
     >
       <span
-        className="ant-radio ant-radio-checked"
+        className="ant-radio"
         style={Object {}}
       >
         <input
-          checked={true}
+          checked={false}
           className="ant-radio-input"
           onBlur={[Function]}
           onChange={[Function]}
