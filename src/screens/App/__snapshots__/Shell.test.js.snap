@@ -31,9 +31,9 @@ exports[`Shell renders 1`] = `
 
 .c2 {
   margin: 24px 16px;
-  padding: 24;
+  padding: 40px;
   background: #fff;
-  min-height: 280;
+  min-height: 280px;
 }
 
 <section

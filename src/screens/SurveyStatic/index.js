@@ -1,44 +1,35 @@
 // @flow
 import React, { Component } from 'react';
-import { Radio, Slider, Input, DatePicker, Select, Switch } from 'antd';
+import { Radio, Slider, Input, DatePicker, Select, Switch, Button } from 'antd';
 import type { SurveyStaticType } from './types';
 import type { Element } from './types';
+import { StyledRadio } from './styles';
+import { StyledQuestion } from './styles';
 
 const RadioGroup = Radio.Group;
 const { Option } = Select;
 
 class SurveyStatic extends Component<{}, SurveyStaticType> {
   render(): Element<'div'> {
-    const radioStyle = {
-      display: 'block',
-      height: '30px',
-      lineHeight: '30px',
-    };
     return (
       <div>
-        <div>Q1. How do you ask in German 'what is your name' ?</div>
+        <StyledQuestion>Q1. How do you ask in German 'what is your name' ?</StyledQuestion>
         <RadioGroup>
-          <Radio style={radioStyle} value={1}>
-            Wie geht es dir?
-          </Radio>
-          <Radio style={radioStyle} value={2}>
-            Wie spaet es ist?
-          </Radio>
-          <Radio style={radioStyle} value={3}>
-            Wie heisst du?
-          </Radio>
+          <StyledRadio value={1}>Wie geht es dir?</StyledRadio>
+          <StyledRadio value={2}>Wie spaet es ist?</StyledRadio>
+          <StyledRadio value={3}>Wie heisst du?</StyledRadio>
         </RadioGroup>
 
-        <div>Q2. What is your name?</div>
+        <StyledQuestion>Q2. What is your name?</StyledQuestion>
         <Input placeholder="Enter your name" />
 
-        <div>Q3. How many states are in Germany?</div>
+        <StyledQuestion>Q3. How many states are in Germany?</StyledQuestion>
         <Slider range defaultValue={[5, 35]} />
 
-        <div>Q4. When is your birthday?</div>
+        <StyledQuestion>Q4. When is your birthday?</StyledQuestion>
         <DatePicker />
 
-        <div>Q5. What kind of coffee do you like?</div>
+        <StyledQuestion>Q5. What kind of coffee do you like?</StyledQuestion>
         <Select defaultValue="freddo">
           <Option value="freddo">freddo</Option>
           <Option value="frape">frape</Option>
@@ -48,8 +39,12 @@ class SurveyStatic extends Component<{}, SurveyStaticType> {
           <Option value="americano">americano</Option>
         </Select>
 
-        <div>Q6. What is your gender?</div>
+        <StyledQuestion>Q6. What is your gender?</StyledQuestion>
         <Switch checkedChildren="Male" unCheckedChildren="Female" defaultChecked />
+
+        <StyledQuestion>
+          <Button type="primary">Submit</Button>
+        </StyledQuestion>
       </div>
     );
   }
