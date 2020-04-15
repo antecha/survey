@@ -72,7 +72,7 @@ exports[`SurveyStatic renders 1`] = `
           onChange={[Function]}
           onFocus={[Function]}
           type="radio"
-          value={3}
+          value="Wie heisst du?"
         />
         <span
           className="ant-radio-inner"
@@ -303,6 +303,7 @@ exports[`SurveyStatic renders 1`] = `
     aria-checked={true}
     className="ant-switch ant-switch-checked"
     defaultChecked={true}
+    onChange={[Function]}
     onClick={[Function]}
     onKeyDown={[Function]}
     onMouseUp={[Function]}
