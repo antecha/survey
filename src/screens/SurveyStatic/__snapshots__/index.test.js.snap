@@ -2,21 +2,16 @@
 
 exports[`SurveyStatic renders 1`] = `
 <div>
-  <div>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
     Q1. How do you ask in German 'what is your name' ?
   </div>
   <div
     className="ant-radio-group ant-radio-group-outline"
   >
     <label
-      className="ant-radio-wrapper"
-      style={
-        Object {
-          "display": "block",
-          "height": "30px",
-          "lineHeight": "30px",
-        }
-      }
+      className="sc-AxjAm glgMFY ant-radio-wrapper"
     >
       <span
         className="ant-radio"
@@ -40,14 +35,7 @@ exports[`SurveyStatic renders 1`] = `
       </span>
     </label>
     <label
-      className="ant-radio-wrapper"
-      style={
-        Object {
-          "display": "block",
-          "height": "30px",
-          "lineHeight": "30px",
-        }
-      }
+      className="sc-AxjAm glgMFY ant-radio-wrapper"
     >
       <span
         className="ant-radio"
@@ -71,14 +59,7 @@ exports[`SurveyStatic renders 1`] = `
       </span>
     </label>
     <label
-      className="ant-radio-wrapper"
-      style={
-        Object {
-          "display": "block",
-          "height": "30px",
-          "lineHeight": "30px",
-        }
-      }
+      className="sc-AxjAm glgMFY ant-radio-wrapper"
     >
       <span
         className="ant-radio"
@@ -102,7 +83,9 @@ exports[`SurveyStatic renders 1`] = `
       </span>
     </label>
   </div>
-  <div>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
     Q2. What is your name?
   </div>
   <input
@@ -113,7 +96,9 @@ exports[`SurveyStatic renders 1`] = `
     type="text"
     value=""
   />
-  <div>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
     Q3. How many states are in Germany?
   </div>
   <div
@@ -188,7 +173,9 @@ exports[`SurveyStatic renders 1`] = `
       className="ant-slider-mark"
     />
   </div>
-  <div>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
     Q4. When is your birthday?
   </div>
   <span
@@ -232,7 +219,9 @@ exports[`SurveyStatic renders 1`] = `
       </i>
     </div>
   </span>
-  <div>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
     Q5. What kind of coffee do you like?
   </div>
   <div
@@ -305,7 +294,9 @@ exports[`SurveyStatic renders 1`] = `
       </span>
     </div>
   </div>
-  <div>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
     Q6. What is your gender?
   </div>
   <button
@@ -324,5 +315,18 @@ exports[`SurveyStatic renders 1`] = `
       Male
     </span>
   </button>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
+    <button
+      className="ant-btn ant-btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        Submit
+      </span>
+    </button>
+  </div>
 </div>
 `;
