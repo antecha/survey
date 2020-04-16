@@ -5,32 +5,33 @@ import type { SurveyStaticType } from './types';
 import type { Element } from './types';
 import { StyledRadio } from './styles';
 import { StyledQuestion } from './styles';
+import type { Moment } from 'moment';
 
 const RadioGroup = Radio.Group;
 const { Option } = Select;
 
 class SurveyStatic extends Component<{}, SurveyStaticType> {
-  handleChangeRadio = e => {
-    console.log('Changed Radio', e);
+  handleChangeRadio = (e: { target: { value: string } }): void => {
+    console.log('Changed Radio', e.target.value);
   };
 
-  handleChangeInput = e => {
-    console.log('Changed Input', e);
+  handleChangeInput = (e: { target: { value: string } }): void => {
+    console.log('Changed Input', e.target.value);
   };
 
-  handleChangeSlider = value => {
+  handleChangeSlider = (value: number): void => {
     console.log('Changed Slider', value);
   };
 
-  handleChangeDate = value => {
-    console.log('Changed Date', value);
+  handleChangeDate = (date: Moment, dateString: string): void => {
+    console.log('Changed Date', date, dateString);
   };
 
-  handleChangeSwitch = (checked, event) => {
-    console.log('Switched', checked, event);
+  handleChangeSwitch = (checked: boolean): void => {
+    console.log('Switched', checked);
   };
-  handleChangeSelect = (value, option) => {
-    console.log('Changed Selected item', value, option);
+  handleChangeSelect = (value: string): void => {
+    console.log('Changed Selected item', value);
   };
   render(): Element<'div'> {
     return (
@@ -46,7 +47,7 @@ class SurveyStatic extends Component<{}, SurveyStaticType> {
         <Input onChange={this.handleChangeInput} placeholder="Enter your name" />
 
         <StyledQuestion>Q3. How many states are in Germany?</StyledQuestion>
-        <Slider onChange={this.handleChangeSlider} range defaultValue={[5, 35]} />
+        <Slider onChange={this.handleChangeSlider} defaultValue={35} />
 
         <StyledQuestion>Q4. When is your birthday?</StyledQuestion>
         <DatePicker onChange={this.handleChangeDate} />
