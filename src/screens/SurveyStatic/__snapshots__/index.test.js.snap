@@ -72,7 +72,7 @@ exports[`SurveyStatic renders 1`] = `
           onChange={[Function]}
           onFocus={[Function]}
           type="radio"
-          value={3}
+          value="Wie heisst du?"
         />
         <span
           className="ant-radio-inner"
@@ -115,12 +115,12 @@ exports[`SurveyStatic renders 1`] = `
       style={Object {}}
     />
     <div
-      className="ant-slider-track ant-slider-track-1"
+      className="ant-slider-track"
       style={
         Object {
-          "left": "5%",
+          "left": "0%",
           "right": "auto",
-          "width": "30%",
+          "width": "35%",
         }
       }
     />
@@ -131,29 +131,8 @@ exports[`SurveyStatic renders 1`] = `
       aria-disabled={false}
       aria-valuemax={100}
       aria-valuemin={0}
-      aria-valuenow={5}
-      className="ant-slider-handle ant-slider-handle-1"
-      onBlur={[Function]}
-      onKeyDown={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      role="slider"
-      style={
-        Object {
-          "left": "5%",
-          "right": "auto",
-          "transform": "translateX(-50%)",
-        }
-      }
-      tabIndex={0}
-    />
-    <div
-      aria-disabled={false}
-      aria-valuemax={100}
-      aria-valuemin={0}
       aria-valuenow={35}
-      className="ant-slider-handle ant-slider-handle-2"
+      className="ant-slider-handle"
       onBlur={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -303,6 +282,7 @@ exports[`SurveyStatic renders 1`] = `
     aria-checked={true}
     className="ant-switch ant-switch-checked"
     defaultChecked={true}
+    onChange={[Function]}
     onClick={[Function]}
     onKeyDown={[Function]}
     onMouseUp={[Function]}
