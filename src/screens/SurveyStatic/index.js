@@ -5,7 +5,6 @@ import type { SurveyStaticProps, SurveyStaticState } from './types';
 import type { Element } from './types';
 import { StyledRadio } from './styles';
 import { StyledQuestion } from './styles';
-import type { Moment } from 'moment';
 
 const RadioGroup = Radio.Group;
 const { Option } = Select;
