@@ -1,18 +1,17 @@
 name: preview workflow
 
 on:
-  pull_request:
   issue_comment:
     types: [created]
 
 jobs:
-  deploy:
+  deploy_preview:
     runs-on: ubuntu-latest
     steps:
       - uses: khan/pull-request-comment-trigger@master
         id: check
         with:
-          trigger: 'deploy'
+          trigger: '@deploy'
           reaction: rocket
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
@@ -33,6 +32,7 @@ jobs:
         if: steps.check.outputs.triggered == 'true'
 
       - uses: jakejarvis/s3-sync-action@master
+        if: steps.check.outputs.triggered == 'true'
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
@@ -41,4 +41,3 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'eu-central-1'
           SOURCE_DIR: 'build'
-        if: steps.check.outputs.triggered == 'true'
