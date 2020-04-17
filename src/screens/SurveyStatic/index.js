@@ -7,7 +7,6 @@ import { StyledRadio } from './styles';
 import { StyledQuestion } from './styles';
 import type { Moment } from 'moment';
 
-const RadioGroup = Radio.Group;
 const { Option } = Select;
 
 class SurveyStatic extends Component<SurveyStaticProps, SurveyStaticState> {
@@ -20,32 +19,26 @@ class SurveyStatic extends Component<SurveyStaticProps, SurveyStaticState> {
     answerQ6: null,
   };
 
-  handleChangeRadio = (e: { target: { value: ?string } }): void => {
-    console.log('Changed Radio', e.target.value);
+  handleChangeRadio = (e: { target: { value: string } }): void => {
     this.setState({ answerQ1: e.target.value });
   };
 
   handleChangeInput = (e: { target: { value: string } }): void => {
-    console.log('Changed Input', e.target.value);
     this.setState({ answerQ2: e.target.value });
   };
 
   handleChangeSlider = (value: number): void => {
-    console.log('Changed Slider', value);
     this.setState({ answerQ3: value });
   };
 
-  handleChangeDate = (date: Moment, dateString: string): void => {
-    console.log('Changed Date', date, dateString);
+  handleChangeDate = (dateString: string): void => {
     this.setState({ answerQ4: dateString });
   };
 
   handleChangeSwitch = (checked: boolean): void => {
-    console.log('Switched', checked);
     this.setState({ answerQ6: checked });
   };
   handleChangeSelect = (value: string): void => {
-    console.log('Changed Selected item', value);
     this.setState({ answerQ5: value });
   };
 
@@ -57,11 +50,11 @@ class SurveyStatic extends Component<SurveyStaticProps, SurveyStaticState> {
     return (
       <div>
         <StyledQuestion>Q1. How do you ask in German 'what is your name' ?</StyledQuestion>
-        <RadioGroup onChange={this.handleChangeRadio}>
+        <Radio onChange={this.handleChangeRadio}>
           <StyledRadio value={1}>Wie geht es dir?</StyledRadio>
           <StyledRadio value={2}>Wie spaet es ist?</StyledRadio>
           <StyledRadio value={'Wie heisst du?'}>Wie heisst du?</StyledRadio>
-        </RadioGroup>
+        </Radio>
 
         <StyledQuestion>Q2. What is your name?</StyledQuestion>
         <Input onChange={this.handleChangeInput} placeholder="Enter your name" />
