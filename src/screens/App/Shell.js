@@ -26,7 +26,7 @@ class Shell extends React.Component<{}, ShellState> {
 
         <Layout>
           <Header collapsed={this.state.collapsed} onIconClick={this.toggle} />
-
+          <div>tttettatadsadsadsasa</div>
           <Routes />
         </Layout>
       </StyledLayout>
