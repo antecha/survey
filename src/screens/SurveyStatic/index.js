@@ -7,6 +7,7 @@ import { StyledRadio } from './styles';
 import { StyledQuestion } from './styles';
 import type { Moment } from 'moment';
 
+const RadioGroup = Radio.Group;
 const { Option } = Select;
 
 class SurveyStatic extends Component<SurveyStaticProps, SurveyStaticState> {
@@ -50,11 +51,11 @@ class SurveyStatic extends Component<SurveyStaticProps, SurveyStaticState> {
     return (
       <div>
         <StyledQuestion>Q1. How do you ask in German 'what is your name' ?</StyledQuestion>
-        <Radio onChange={this.handleChangeRadio}>
+        <RadioGroup onChange={this.handleChangeRadio}>
           <StyledRadio value={1}>Wie geht es dir?</StyledRadio>
           <StyledRadio value={2}>Wie spaet es ist?</StyledRadio>
           <StyledRadio value={'Wie heisst du?'}>Wie heisst du?</StyledRadio>
-        </Radio>
+        </RadioGroup>
 
         <StyledQuestion>Q2. What is your name?</StyledQuestion>
         <Input onChange={this.handleChangeInput} placeholder="Enter your name" />

@@ -17,100 +17,82 @@ exports[`SurveyStatic renders 1`] = `
   >
     Q1. How do you ask in German 'what is your name' ?
   </div>
-  <label
-    className="ant-radio-wrapper"
+  <div
+    className="ant-radio-group ant-radio-group-outline"
   >
-    <span
-      className="ant-radio"
-      style={Object {}}
+    <label
+      className="c1 ant-radio-wrapper"
     >
-      <input
-        checked={false}
-        className="ant-radio-input"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        type="radio"
-      />
       <span
-        className="ant-radio-inner"
-      />
-    </span>
-    <span>
-      <label
-        className="c1 ant-radio-wrapper"
+        className="ant-radio"
+        style={Object {}}
       >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value={1}
+        />
         <span
-          className="ant-radio"
-          style={Object {}}
-        >
-          <input
-            checked={false}
-            className="ant-radio-input"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="radio"
-            value={1}
-          />
-          <span
-            className="ant-radio-inner"
-          />
-        </span>
-        <span>
-          Wie geht es dir?
-        </span>
-      </label>
-      <label
-        className="c1 ant-radio-wrapper"
+          className="ant-radio-inner"
+        />
+      </span>
+      <span>
+        Wie geht es dir?
+      </span>
+    </label>
+    <label
+      className="c1 ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
       >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value={2}
+        />
         <span
-          className="ant-radio"
-          style={Object {}}
-        >
-          <input
-            checked={false}
-            className="ant-radio-input"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="radio"
-            value={2}
-          />
-          <span
-            className="ant-radio-inner"
-          />
-        </span>
-        <span>
-          Wie spaet es ist?
-        </span>
-      </label>
-      <label
-        className="c1 ant-radio-wrapper"
+          className="ant-radio-inner"
+        />
+      </span>
+      <span>
+        Wie spaet es ist?
+      </span>
+    </label>
+    <label
+      className="c1 ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
       >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="Wie heisst du?"
+        />
         <span
-          className="ant-radio"
-          style={Object {}}
-        >
-          <input
-            checked={false}
-            className="ant-radio-input"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onFocus={[Function]}
-            type="radio"
-            value="Wie heisst du?"
-          />
-          <span
-            className="ant-radio-inner"
-          />
-        </span>
-        <span>
-          Wie heisst du?
-        </span>
-      </label>
-    </span>
-  </label>
+          className="ant-radio-inner"
+        />
+      </span>
+      <span>
+        Wie heisst du?
+      </span>
+    </label>
+  </div>
   <div
     className="c0"
   >

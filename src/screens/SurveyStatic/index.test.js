@@ -7,7 +7,7 @@ describe('SurveyStatic', () => {
   const testRenderer = create(<SurveyStatic />);
 
   it('renders', () => {
-    testRenderer.root.findByType(Radio).props.onChange({ target: { value: 'test' } });
+    testRenderer.root.findByType(Radio.Group).props.onChange({ target: { value: 'test' } });
     testRenderer.root.findByType(Input).props.onChange({ target: { value: 'test' } });
     testRenderer.root.findByType(Slider).props.onChange({ value: 'test' });
     testRenderer.root.findByType(DatePicker).props.onChange({ dateString: 'test' });
