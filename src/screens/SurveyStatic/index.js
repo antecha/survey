@@ -1,38 +1,51 @@
 // @flow
 import React, { Component } from 'react';
 import { Radio, Slider, Input, DatePicker, Select, Switch, Button } from 'antd';
-import type { SurveyStaticType } from './types';
+import type { SurveyStaticProps, SurveyStaticState } from './types';
 import type { Element } from './types';
 import { StyledRadio } from './styles';
 import { StyledQuestion } from './styles';
-import type { Moment } from 'moment';
 
 const RadioGroup = Radio.Group;
 const { Option } = Select;
 
-class SurveyStatic extends Component<{}, SurveyStaticType> {
+class SurveyStatic extends Component<SurveyStaticProps, SurveyStaticState> {
+  state = {
+    answerQ1: null,
+    answerQ2: null,
+    answerQ3: null,
+    answerQ4: null,
+    answerQ5: null,
+    answerQ6: null,
+  };
+
   handleChangeRadio = (e: { target: { value: string } }): void => {
-    console.log('Changed Radio', e.target.value);
+    this.setState({ answerQ1: e.target.value });
   };
 
   handleChangeInput = (e: { target: { value: string } }): void => {
-    console.log('Changed Input', e.target.value);
+    this.setState({ answerQ2: e.target.value });
   };
 
   handleChangeSlider = (value: number): void => {
-    console.log('Changed Slider', value);
+    this.setState({ answerQ3: value });
   };
 
-  handleChangeDate = (date: Moment, dateString: string): void => {
-    console.log('Changed Date', date, dateString);
+  handleChangeDate = (dateString: string): void => {
+    this.setState({ answerQ4: dateString });
   };
 
   handleChangeSwitch = (checked: boolean): void => {
-    console.log('Switched', checked);
+    this.setState({ answerQ6: checked });
   };
   handleChangeSelect = (value: string): void => {
-    console.log('Changed Selected item', value);
+    this.setState({ answerQ5: value });
   };
+
+  handleSubmit = (): void => {
+    console.log('test submit', this.state);
+  };
+
   render(): Element<'div'> {
     return (
       <div>
@@ -71,7 +84,9 @@ class SurveyStatic extends Component<{}, SurveyStaticType> {
         />
 
         <StyledQuestion>
-          <Button type="primary">Submit</Button>
+          <Button onClick={this.handleSubmit} type="primary">
+            Submit
+          </Button>
         </StyledQuestion>
       </div>
     );
