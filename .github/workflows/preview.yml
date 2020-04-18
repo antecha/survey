@@ -1,11 +1,17 @@
 name: preview workflow
 
-on: pull_request
+on:
+  push:
+    branches:
+      - preview
+  pull_request:
+    types:
+      - labeled
 
 jobs:
   deploy_preview:
-    if: contains(github.event.pull_request.labels.*.name, 'deploy preview')
-    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'deploy preview') || github.ref == 'refs/heads/preview'
+    runs-on: ubuntu-latests
     steps:
       - uses: actions/checkout@v1
 
