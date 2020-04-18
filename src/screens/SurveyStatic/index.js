@@ -1,8 +1,6 @@
 // @flow
 import React, { useState } from 'react';
 import { Radio, Slider, Input, DatePicker, Select, Switch, Button } from 'antd';
-import type { SurveyStaticProps, SurveyStaticState } from './types';
-import type { Element } from './types';
 import { StyledRadio } from './styles';
 import { StyledQuestion } from './styles';
 
@@ -16,8 +14,6 @@ const SurveyStatic = () => {
   const [Q4, setQ4] = useState(null);
   const [Q5, setQ5] = useState(null);
   const [Q6, setQ6] = useState(null);
-  const [Submit, setSubmit] = useState(null);
-
   const handleChangeRadio = changedQ1 => {
     setQ1(changedQ1);
   };
@@ -37,7 +33,7 @@ const SurveyStatic = () => {
     setQ6(changedQ6);
   };
   const handleSubmit = clickedSubmit => {
-    setSubmit(clickedSubmit);
+    console.log(Q1, Q2, Q3, Q4, Q5, Q6);
   };
 
   return (
