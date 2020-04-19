@@ -13,23 +13,36 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'deploy preview') || github.ref == 'refs/heads/preview'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-          registry-url: https://registry.npmjs.org
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@antecha'
 
-      - run: npm install
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+
+      - run: npm install --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - run: npm run build
 
-      - uses: jakejarvis/s3-sync-action@master
+      - uses: aws-actions/configure-aws-credentials@v1
         with:
-          args: --acl public-read --follow-symlinks --delete
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - shell: bash
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_TESTING }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'eu-central-1'
-          SOURCE_DIR: 'build'
+          AWS_BUCKET: ${{ secrets.AWS_S3_BUCKET_TESTING }}
+        run: |
+          aws s3 sync build/ s3://$AWS_BUCKET
