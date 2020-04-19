@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledQuestion } from '../../src/screens/SurveyStatic/styles';
+import { StyledQuestion } from '../../screens/SurveyStatic/styles';
 import { Controller } from 'react-hook-form';
 import { Radio } from 'antd';
 

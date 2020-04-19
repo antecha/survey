@@ -4,7 +4,7 @@ import { Slider, Input, DatePicker, Select, Switch } from 'antd';
 import { StyledQuestion } from '../SurveyStatic/styles';
 import { useForm, Controller } from 'react-hook-form';
 import RadioInput from '../../components/RadioInput/RadioInput';
-import InputName from '../../components/InputName/InputName';
+import InputText from '../../components/InputText/InputText';
 
 const { Option } = Select;
 
@@ -30,7 +30,7 @@ const SurveyStatic = () => {
           name="radio"
         />
 
-        <InputName control={control} question="Q2. What is your name?" name="inputName" />
+        <InputText control={control} question="Q2. What is your name?" name="inputName" />
 
         <StyledQuestion>Q3. How many states are in Germany?</StyledQuestion>
         <Controller as={Slider} name="states" control={control} defaultValue={35} />
