@@ -7,16 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Use node 12.x
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-          registry-url: https://registry.npmjs.org
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@antecha'
 
       - name: install
-        run: npm install
+        run: npm install --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: test_lint
         run: npm run lint
