@@ -1,9 +1,10 @@
 // @flow
 import React from 'react';
 import { Slider, Input, DatePicker, Select, Switch } from 'antd';
-import { StyledQuestion } from './styles';
+import { StyledQuestion } from '../SurveyStatic/styles';
 import { useForm, Controller } from 'react-hook-form';
-import RadioInput from '../../components/RadioInput';
+import RadioInput from '../../components/RadioInput/RadioInput';
+import InputName from '../../components/InputName/InputName';
 
 const { Option } = Select;
 
@@ -22,28 +23,14 @@ const SurveyStatic = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* <StyledQuestion>Q1. How do you ask in German 'what is your name' ?</StyledQuestion> */}
         <RadioInput
           control={control}
           options={options}
           question="Q1. How do you ask in German 'what is your name' ?"
           name="radio"
         />
-        {/* <Controller
-          as={
-            <Radio.Group>
-              <Radio value={1}>Wie geht es dir?</Radio>
-              <Radio value={2}>Wie spaet es ist?</Radio>
-              <Radio value={3}>Wie heisst du?</Radio>
-            </Radio.Group>
-          }
-          onChange={([e]) => e.target.value}
-          name="radio"
-          control={control}
-        /> */}
 
-        <StyledQuestion>Q2. What is your name?</StyledQuestion>
-        <Controller as={Input} name="username" control={control} defaultValue="" />
+        <InputName control={control} question="Q2. What is your name?" name="inputName" />
 
         <StyledQuestion>Q3. How many states are in Germany?</StyledQuestion>
         <Controller as={Slider} name="states" control={control} defaultValue={35} />
