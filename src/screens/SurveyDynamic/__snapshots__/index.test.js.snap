@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SurveyDynamic renders 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="sc-AxirZ iVctAK"
+  >
+    How do you ask in German: what is your name?
+  </div>
+  <div
+    className="ant-radio-group ant-radio-group-outline"
+  >
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          name="questionID1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="one"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          name="questionID1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="two"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+    <label
+      className="ant-radio-wrapper"
+    >
+      <span
+        className="ant-radio"
+        style={Object {}}
+      >
+        <input
+          checked={false}
+          className="ant-radio-input"
+          name="questionID1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="radio"
+          value="three"
+        />
+        <span
+          className="ant-radio-inner"
+        />
+      </span>
+    </label>
+  </div>
+  <div>
+    <div
+      className="sc-AxirZ iVctAK"
+    >
+      What is your name?
+    </div>
+    <input
+      className="ant-input"
+      name="questionID2"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      type="text"
+      value=""
+    />
+  </div>
+  <div>
+    <div
+      className="sc-AxirZ iVctAK"
+    >
+      How many states are in Germany?
+    </div>
+    <span
+      className="ant-calendar-picker"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={Object {}}
+    >
+      <div
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <input
+          className="ant-calendar-picker-input ant-input"
+          name="questionID3"
+          placeholder="Select date"
+          readOnly={true}
+          value=""
+        />
+        <i
+          aria-label="icon: calendar"
+          className="anticon anticon-calendar ant-calendar-picker-icon"
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-icon="calendar"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"
+            />
+          </svg>
+        </i>
+      </div>
+    </span>
+  </div>
+  <div>
+    <div
+      className="sc-AxirZ iVctAK"
+    >
+      When is your birthday?
+    </div>
+    <span
+      className="ant-calendar-picker"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={Object {}}
+    >
+      <div
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <input
+          className="ant-calendar-picker-input ant-input"
+          name="questionID4"
+          placeholder="Select date"
+          readOnly={true}
+          value=""
+        />
+        <i
+          aria-label="icon: calendar"
+          className="anticon anticon-calendar ant-calendar-picker-icon"
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-icon="calendar"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"
+            />
+          </svg>
+        </i>
+      </div>
+    </span>
+  </div>
+  <div>
+    <div
+      className="sc-AxirZ iVctAK"
+    >
+      What kind of coffee do you like?
+    </div>
+    <div
+      className="ant-select ant-select-enabled"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseUp={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        aria-autocomplete="list"
+        aria-controls="test-uuid"
+        aria-expanded={false}
+        aria-haspopup="true"
+        className="ant-select-selection
+            ant-select-selection--single"
+        onKeyDown={[Function]}
+        role="combobox"
+        tabIndex={0}
+      >
+        <div
+          className="ant-select-selection__rendered"
+        >
+          <div
+            className="ant-select-selection-selected-value"
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+              }
+            }
+            title="one"
+          >
+            one
+          </div>
+        </div>
+        <span
+          className="ant-select-arrow"
+          onClick={[Function]}
+          style={
+            Object {
+              "WebkitUserSelect": "none",
+              "userSelect": "none",
+            }
+          }
+          unselectable="on"
+        >
+          <i
+            aria-label="icon: down"
+            className="anticon anticon-down ant-select-arrow-icon"
+          >
+            <svg
+              aria-hidden="true"
+              className=""
+              data-icon="down"
+              fill="currentColor"
+              focusable="false"
+              height="1em"
+              viewBox="64 64 896 896"
+              width="1em"
+            >
+              <path
+                d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+              />
+            </svg>
+          </i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="sc-AxirZ iVctAK"
+    >
+      What is your gender?
+    </div>
+    <button
+      aria-checked={true}
+      className="ant-switch ant-switch-checked"
+      defaultChecked={true}
+      name="questionID6"
+      onChange={[Function]}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      role="switch"
+      type="button"
+    >
+      <span
+        className="ant-switch-inner"
+      >
+        Male
+      </span>
+    </button>
+  </div>
+  <button
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
