@@ -14,9 +14,9 @@ const questionList = [
     title: 'How do you ask in German: what is your name?',
     type: 'radio',
     options: [
-      { value: 'one', label: 'Wie geht es dir?' },
-      { value: 'two', label: 'Wie spaet es ist?' },
-      { value: 'three', label: '- Wie heisst du?' },
+      { value: 'one', title: 'Wie geht es dir?' },
+      { value: 'two', title: 'Wie spaet es ist?' },
+      { value: 'three', title: '- Wie heisst du?' },
     ],
   },
   {
@@ -93,7 +93,7 @@ const SurveyDynamic = () => {
                 name={question.id}
                 control={control}
                 question={question.title}
-                value="one"
+                value="freddo"
               />
             );
 
