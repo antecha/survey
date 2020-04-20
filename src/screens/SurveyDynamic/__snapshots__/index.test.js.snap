@@ -33,6 +33,9 @@ exports[`SurveyDynamic renders 1`] = `
           className="ant-radio-inner"
         />
       </span>
+      <span>
+        Wie geht es dir?
+      </span>
     </label>
     <label
       className="ant-radio-wrapper"
@@ -55,6 +58,9 @@ exports[`SurveyDynamic renders 1`] = `
           className="ant-radio-inner"
         />
       </span>
+      <span>
+        Wie spaet es ist?
+      </span>
     </label>
     <label
       className="ant-radio-wrapper"
@@ -76,6 +82,9 @@ exports[`SurveyDynamic renders 1`] = `
         <span
           className="ant-radio-inner"
         />
+      </span>
+      <span>
+        - Wie heisst du?
       </span>
     </label>
   </div>
@@ -239,9 +248,9 @@ exports[`SurveyDynamic renders 1`] = `
                 "opacity": 1,
               }
             }
-            title="one"
+            title="freddo"
           >
-            one
+            freddo
           </div>
         </div>
         <span
