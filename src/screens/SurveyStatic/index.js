@@ -1,13 +1,13 @@
 // @flow
 import React from 'react';
-import { DatePicker, Select, Switch } from 'antd';
-import { StyledQuestion } from '../SurveyStatic/styles';
-import { useForm, Controller } from 'react-hook-form';
+import { StyledQuestion } from './styles';
+import { useForm } from 'react-hook-form';
 import RadioInput from '../../components/RadioInput/RadioInput';
 import InputText from '../../components/InputText/InputText';
 import SliderNumber from '../../components/SliderNumber/SliderNumber';
-
-const { Option } = Select;
+import PickerDate from '../../components/PickerDate/PickerDate';
+import SelectOption from '../../components/SelectOption/SelectOption';
+import SwitchInput from '../../components/SwitchInput/SwitchInput';
 
 const options = [
   { value: 1, title: 'Wie geht es dir?' },
@@ -39,28 +39,16 @@ const SurveyStatic = () => {
           name="number"
         />
 
-        <StyledQuestion>Q4. When is your birthday?</StyledQuestion>
-        <Controller as={DatePicker} name="date" control={control} defaultValue="" />
+        <PickerDate name="date" control={control} question="Q4. When is your birthday?" />
 
-        <StyledQuestion>Q5. What kind of coffee do you like?</StyledQuestion>
-        <Controller as={Select} name="Select" control={control} defaultValue="freddo">
-          <Option value="freddo">freddo</Option>
-          <Option value="frape">frape</Option>
-          <Option value="capuccino">capuccino</Option>
-          <Option value="filter cafe">filter cafe</Option>
-          <Option value="latte">latte</Option>
-          <Option value="americano">americano</Option>
-        </Controller>
-
-        <StyledQuestion>Q6. What is your gender?</StyledQuestion>
-        <Controller
-          as={Switch}
-          name="Gender"
+        <SelectOption
+          name="Select"
           control={control}
-          checkedChildren="Male"
-          unCheckedChildren="Female"
-          defaultChecked
+          question="Q5. What kind of coffee do you like?"
+          value="freddo"
         />
+
+        <SwitchInput name="Switch" control={control} question="Q6. What is your gender?" />
 
         <StyledQuestion>
           <button type="submit">Submit</button>
