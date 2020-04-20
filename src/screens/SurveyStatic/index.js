@@ -1,10 +1,11 @@
 // @flow
 import React from 'react';
-import { Slider, Input, DatePicker, Select, Switch } from 'antd';
+import { DatePicker, Select, Switch } from 'antd';
 import { StyledQuestion } from '../SurveyStatic/styles';
 import { useForm, Controller } from 'react-hook-form';
 import RadioInput from '../../components/RadioInput/RadioInput';
 import InputText from '../../components/InputText/InputText';
+import SliderNumber from '../../components/SliderNumber/SliderNumber';
 
 const { Option } = Select;
 
@@ -32,8 +33,11 @@ const SurveyStatic = () => {
 
         <InputText control={control} question="Q2. What is your name?" name="inputName" />
 
-        <StyledQuestion>Q3. How many states are in Germany?</StyledQuestion>
-        <Controller as={Slider} name="states" control={control} defaultValue={35} />
+        <SliderNumber
+          control={control}
+          question="Q3. How many states are in Germany?"
+          name="number"
+        />
 
         <StyledQuestion>Q4. When is your birthday?</StyledQuestion>
         <Controller as={DatePicker} name="date" control={control} defaultValue="" />
