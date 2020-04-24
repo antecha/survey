@@ -6,6 +6,7 @@ import { StyledContent } from './styles';
 import type { RoutesProps } from './types';
 import type { Element } from './types';
 import SurveyStatic from '../SurveyStatic';
+import SurveyDynamic from '../SurveyDynamic';
 
 export const AppContent = ({ children }: RoutesProps): Element<'StyledContent'> => (
   <StyledContent>{children}</StyledContent>
@@ -27,6 +28,12 @@ const Routes = (): Element<any> => {
       <Route path="/SurveyList/SurveyStatic">
         <AppContent>
           <SurveyStatic />
+        </AppContent>
+      </Route>
+
+      <Route path="/SurveyList/SurveyDynamic">
+        <AppContent>
+          <SurveyDynamic />
         </AppContent>
       </Route>
     </React.Fragment>
