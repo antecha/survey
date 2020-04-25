@@ -226,6 +226,11 @@ exports[`SurveyStatic renders 1`] = `
         onMouseOut={[Function]}
         onMouseUp={[Function]}
         onTouchStart={[Function]}
+        style={
+          Object {
+            "minWidth": 200,
+          }
+        }
       >
         <div
           aria-autocomplete="list"
