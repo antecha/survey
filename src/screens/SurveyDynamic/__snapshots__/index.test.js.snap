@@ -7,7 +7,7 @@ exports[`SurveyDynamic renders 1`] = `
   <div
     className="sc-AxirZ iVctAK"
   >
-    How do you ask in German: what is your name?
+    How do you like your coffee?
   </div>
   <div
     className="ant-radio-group ant-radio-group-outline"
@@ -34,7 +34,7 @@ exports[`SurveyDynamic renders 1`] = `
         />
       </span>
       <span>
-        Wie geht es dir?
+        With Sugar
       </span>
     </label>
     <label
@@ -59,7 +59,7 @@ exports[`SurveyDynamic renders 1`] = `
         />
       </span>
       <span>
-        Wie spaet es ist?
+        With no Sugar
       </span>
     </label>
     <label
@@ -84,7 +84,7 @@ exports[`SurveyDynamic renders 1`] = `
         />
       </span>
       <span>
-        - Wie heisst du?
+        With middle sugar
       </span>
     </label>
   </div>

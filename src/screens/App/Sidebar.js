@@ -28,6 +28,11 @@ const Sidebar = ({ collapsed }: SidebarProps): Element<'Sider'> => (
           <span>Survey Dynamic</span>
           <Link to="/SurveyList/SurveyDynamic" />
         </Menu.Item>
+        <Menu.Item>
+          <Icon type="user" />
+          <span>Survey Dynamic 2</span>
+          <Link to="/SurveyList/SurveyDynamic2" />
+        </Menu.Item>
       </SubMenu>
 
       <Menu.Item key="2">
