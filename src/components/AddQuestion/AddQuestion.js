@@ -3,11 +3,26 @@ import { useForm } from 'react-hook-form';
 import InputText from '../InputText/InputText';
 import SelectOption from '../SelectOption/SelectOption';
 import { Button } from 'antd';
+import axios from 'axios';
 
 const AddQuestion = () => {
   const { handleSubmit, control } = useForm();
   const onSubmit = data => {
     console.log(data);
+    axios
+      .post('http://localhost:3005/questions', {
+        title: data.title,
+        surveyID: 'one',
+        type: data.type,
+      })
+      .then(
+        response => {
+          console.log('sucess');
+        },
+        error => {
+          console.log('error');
+        },
+      );
   };
 
   return (
