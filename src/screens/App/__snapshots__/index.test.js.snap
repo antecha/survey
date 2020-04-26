@@ -2,7 +2,7 @@
 
 exports[`App renders 1`] = `
 <section
-  className="sc-AxjAm jCuiTa ant-layout ant-layout-has-sider"
+  className="sc-AxiKw jwKuyx ant-layout ant-layout-has-sider"
 >
   <aside
     className="ant-layout-sider ant-layout-sider-dark"
@@ -140,7 +140,7 @@ exports[`App renders 1`] = `
     className="ant-layout"
   >
     <header
-      className="sc-AxirZ cnDfgi ant-layout-header"
+      className="sc-AxhCb kHMpIG ant-layout-header"
     >
       <i
         aria-label="icon: menu-fold"
@@ -165,7 +165,7 @@ exports[`App renders 1`] = `
       </i>
     </header>
     <main
-      className="sc-AxiKw jVPftb ant-layout-content"
+      className="sc-AxhUy hdwjou ant-layout-content"
     >
       Suvey-list
     </main>

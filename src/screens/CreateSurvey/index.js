@@ -1,8 +1,9 @@
 // @flow
 import React, { Component } from 'react';
-import { Tabs, Input, Button } from 'antd';
+import { Tabs, Button } from 'antd';
 import type { Element } from './types';
 import type { SurveyState } from './types';
+import AddQuestion from '../../components/AddQuestion/AddQuestion';
 
 const { TabPane } = Tabs;
 
@@ -29,7 +30,7 @@ class CreateSurvey extends Component<{}, SurveyState> {
         <Tabs defaultActiveKey="1">
           <TabPane tab="Create Survey" key="1">
             {showAddQuestion ? (
-              <Input onChange={this.handleQuestion} />
+              <AddQuestion onChange={this.handleQuestion} />
             ) : (
               <Button onClick={this.handleShowQuestion4444}>add question</Button>
             )}

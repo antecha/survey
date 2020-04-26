@@ -9,13 +9,19 @@ const SelectOption = ({ question, control, name, value }) => {
   return (
     <div>
       <StyledQuestion>{question}</StyledQuestion>
-      <Controller as={Select} name={name} control={control} defaultValue={value}>
-        <Option value="freddo">freddo</Option>
-        <Option value="frape">frape</Option>
-        <Option value="capuccino">capuccino</Option>
-        <Option value="filter cafe">filter cafe</Option>
-        <Option value="latte">latte</Option>
-        <Option value="americano">americano</Option>
+      <Controller
+        style={{ minWidth: 200 }}
+        as={Select}
+        name={name}
+        control={control}
+        defaultValue={value}
+      >
+        <Option value="radio">radio</Option>
+        <Option value="text">text</Option>
+        <Option value="Slider">Slider</Option>
+        <Option value="Date">Date</Option>
+        <Option value="Select">Select</Option>
+        <Option value="Switch">Switch</Option>
       </Controller>
     </div>
   );

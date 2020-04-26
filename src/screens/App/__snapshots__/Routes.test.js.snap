@@ -2,7 +2,7 @@
 
 exports[`AppContent renders 1`] = `
 <main
-  className="sc-AxiKw jVPftb ant-layout-content"
+  className="sc-AxhUy hdwjou ant-layout-content"
 >
   <div />
 </main>
@@ -11,7 +11,7 @@ exports[`AppContent renders 1`] = `
 exports[`Routes renders 1`] = `
 Array [
   <main
-    className="sc-AxiKw jVPftb ant-layout-content"
+    className="sc-AxhUy hdwjou ant-layout-content"
   >
     Suvey-list
   </main>,
