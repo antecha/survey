@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import InputText from '../InputText/InputText';
-import SelectOption from '../SelectOption/SelectOption';
+import InputText from '../InputText';
+import InputSelect from '../InputSelect';
 import { Button, message } from 'antd';
 import axios from 'axios';
 
@@ -17,11 +17,11 @@ const AddQuestion = () => {
       })
       .then(
         response => {
-          message.success('Success');
-          console.log('success');
+          message.success('Question created successfully');
+          console.log('Question created successfully');
         },
         error => {
-          message.error('Error');
+          message.error('Error creating the Question');
           console.log(error.response);
         },
       );
@@ -30,8 +30,8 @@ const AddQuestion = () => {
   return (
     <div>
       <form>
-        <InputText name="title" control={control} question="Question Title" />
-        <SelectOption name="type" control={control} question="Question Type" value="" />
+        <InputText name="title" control={control} label="Question Title" />
+        <InputSelect name="type" control={control} label="Question Type" value="" />
         <Button onClick={handleSubmit(onSubmit)} style={{ marginTop: 35 }} type="primary">
           Submit
         </Button>

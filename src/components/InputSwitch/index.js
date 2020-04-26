@@ -1,12 +1,10 @@
 import React from 'react';
-import { StyledQuestion } from '../../screens/SurveyStatic/styles';
 import { Controller } from 'react-hook-form';
-import { Switch } from 'antd';
+import { Switch, Form } from 'antd';
 
-const SwitchInput = ({ question, control, name }) => {
+const InputSwitch = ({ label, control, name }) => {
   return (
-    <div>
-      <StyledQuestion>{question}</StyledQuestion>
+    <Form.Item label={label} colon={false}>
       <Controller
         as={Switch}
         name={name}
@@ -15,7 +13,7 @@ const SwitchInput = ({ question, control, name }) => {
         unCheckedChildren="Female"
         defaultChecked
       />
-    </div>
+    </Form.Item>
   );
 };
-export default SwitchInput;
+export default InputSwitch;

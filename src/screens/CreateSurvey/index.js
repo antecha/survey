@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Tabs, Button } from 'antd';
 import type { Element } from './types';
 import type { SurveyState } from './types';
-import AddQuestion from '../../components/AddQuestion/AddQuestion';
+import AddQuestion from '../../components/AddQuestion';
 
 const { TabPane } = Tabs;
 
