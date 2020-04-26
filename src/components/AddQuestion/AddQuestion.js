@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import InputText from '../InputText/InputText';
 import SelectOption from '../SelectOption/SelectOption';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 import axios from 'axios';
 
 const AddQuestion = () => {
@@ -17,10 +17,12 @@ const AddQuestion = () => {
       })
       .then(
         response => {
-          console.log('sucess');
+          message.success('Success');
+          console.log('success');
         },
         error => {
-          console.log('error');
+          message.error('Error');
+          console.log(error.response);
         },
       );
   };
