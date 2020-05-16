@@ -1,19 +1,17 @@
 //@flow
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import RadioInput from '../../components/RadioInput/RadioInput';
-import InputText from '../../components/InputText/InputText';
-import SliderNumber from '../../components/SliderNumber/SliderNumber';
-import PickerDate from '../../components/PickerDate/PickerDate';
-import SelectOption from '../../components/SelectOption/SelectOption';
-import SwitchInput from '../../components/SwitchInput/SwitchInput';
+import InputRadio from '../../components/InputRadio';
+import InputText from '../../components/InputText';
+import InputSlider from '../../components/InputSlider';
+import InputDate from '../../components/InputDate';
+import InputSelect from '../../components/InputSelect';
+import InputSwitch from '../../components/InputSwitch';
 import type { SurveyDynamicProps } from './types';
 
 const SurveyDynamic = ({ questionList }: SurveyDynamicProps) => {
   const { handleSubmit, control } = useForm();
-  const onSubmit = data => {
-    console.log(data);
-  };
+  const onSubmit = data => {};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -21,35 +19,28 @@ const SurveyDynamic = ({ questionList }: SurveyDynamicProps) => {
         switch (question.type) {
           case 'radio':
             return (
-              <RadioInput
+              <InputRadio
                 control={control}
                 options={question.options}
-                question={question.title}
+                label={question.title}
                 name={question.id}
               />
             );
 
           case 'text':
-            return <InputText name={question.id} control={control} question={question.title} />;
+            return <InputText name={question.id} control={control} label={question.title} />;
 
           case 'number':
-            return <SliderNumber name={question.id} control={control} question={question.title} />;
+            return <InputSlider name={question.id} control={control} label={question.title} />;
 
           case 'date':
-            return <PickerDate name={question.id} control={control} question={question.title} />;
+            return <InputDate name={question.id} control={control} label={question.title} />;
 
           case 'select':
-            return (
-              <SelectOption
-                name={question.id}
-                control={control}
-                question={question.title}
-                value="freddo"
-              />
-            );
+            return <InputSelect name={question.id} control={control} label={question.title} />;
 
           case 'switch':
-            return <SwitchInput name={question.id} control={control} question={question.title} />;
+            return <InputSwitch name={question.id} control={control} label={question.title} />;
 
           default:
             return null;
