@@ -18,7 +18,6 @@ class CreateSurvey extends Component<{}, SurveyState> {
   };
 
   handleQuestion = (e: { target: { value: string } }): void => {
-    console.log(e);
     this.setState({ saveQuestion: e.target.value });
   };
 

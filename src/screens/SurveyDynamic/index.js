@@ -11,9 +11,7 @@ import type { SurveyDynamicProps } from './types';
 
 const SurveyDynamic = ({ questionList }: SurveyDynamicProps) => {
   const { handleSubmit, control } = useForm();
-  const onSubmit = data => {
-    console.log(data);
-  };
+  const onSubmit = data => {};
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
